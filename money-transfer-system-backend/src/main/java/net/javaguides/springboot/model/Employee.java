@@ -1,5 +1,8 @@
 package net.javaguides.springboot.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -76,7 +79,10 @@ public class Employee {
 	}
 
 	public void setDateTime(String dateTime) {
-		this.dateTime = dateTime;
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		   LocalDateTime now = LocalDateTime.now();
+		this.dateTime = dtf.format(now);
+	//	this.dateTime = dateTime;
 	}
 
 	public int getAccountNum() {
