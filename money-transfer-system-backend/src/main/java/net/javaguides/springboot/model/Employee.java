@@ -36,11 +36,13 @@ public class Employee {
 	@Column(name = "balance")
 	private Double balance;
 	
+	@Column(name = "created_date")
+	private String created_date;
 	public Employee() {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId, String dateTime, int accountNum, Double balance) {
+	public Employee(String firstName, String lastName, String emailId, String dateTime, int accountNum, Double balance,String created_date) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -48,6 +50,7 @@ public class Employee {
 		this.dateTime = dateTime;
 		this.accountNum = accountNum;
 		this.balance = balance;
+		this.created_date = created_date;
 	}
 	public long getId() {
 		return id;
@@ -100,4 +103,13 @@ public class Employee {
 	public void setBalance(Double balance) {
 		this.balance = balance;
 	}
+
+	public String getCreated_date() {
+		return created_date;
+	}
+
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
+	}
+	
 }

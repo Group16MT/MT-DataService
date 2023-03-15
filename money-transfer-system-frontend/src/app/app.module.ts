@@ -10,6 +10,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import {DataTablesModule} from 'angular-datatables';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import {DataTablesModule} from 'angular-datatables';
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
     DeleteEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     BrowserModule,

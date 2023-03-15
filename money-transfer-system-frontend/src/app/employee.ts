@@ -6,4 +6,6 @@ export class Employee {
     dateTime!: string;
     accountNum!: number;
     balance!: number;
+    startDate!: string;
+    endDate!: string;
 }
