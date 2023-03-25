@@ -1,4 +1,4 @@
-package net.javaguides.springboot.service;
+package moneytransfersystem.com.service;
 
 import java.util.Date;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import net.javaguides.springboot.model.Employee;
-import net.javaguides.springboot.repository.EmployeeRepository;
+import moneytransfersystem.com.model.Employee;
+import moneytransfersystem.com.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {

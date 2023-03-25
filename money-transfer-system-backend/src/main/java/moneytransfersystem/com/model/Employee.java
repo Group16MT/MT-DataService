@@ -1,4 +1,4 @@
-package net.javaguides.springboot.model;
+package moneytransfersystem.com.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

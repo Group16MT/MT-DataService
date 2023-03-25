@@ -1,10 +1,10 @@
-package net.javaguides.springboot.repository;
+package moneytransfersystem.com.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import java.util.List;
-import net.javaguides.springboot.model.Employee;
+import moneytransfersystem.com.model.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
