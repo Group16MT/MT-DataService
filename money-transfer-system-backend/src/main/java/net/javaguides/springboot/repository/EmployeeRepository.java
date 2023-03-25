@@ -11,6 +11,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 	
 	
 	
-	@Query(value = "SELECT * FROM employees  WHERE created_date >= ?1 AND created_date <= ?2" ,nativeQuery=true)
+	@Query(value = "SELECT * FROM employees  WHERE date_time >= ?1 AND date_time <= ?2" ,nativeQuery=true)
 	List<Employee> getTransactionDetails(String startDate, String endDate);
 }

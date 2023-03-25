@@ -16,7 +16,7 @@ public class EmployeeService {
 	private EmployeeRepository employeeRepository;
 	
 	public List<Employee> getTransactionDetails(String startDate, String endDate) {
-		List<Employee> employeeList = employeeRepository.getTransactionDetails(startDate, endDate);
+		List<Employee> employeeList = employeeRepository.getTransactionDetails(startDate+" 00:00:00", endDate+" 23:59:59");
 		return employeeList;
 		
 	}
