@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 07:17 AM
+-- Generation Time: Mar 26, 2023 at 07:32 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -42,56 +42,56 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`id`, `email_id`, `first_name`, `last_name`, `date_time`, `account_num`, `balance`) VALUES
-(1, 'abhi.kr@gmail.com', 'Abhishek', 'Kumar', '2023-02-13 18:49:02', 0, 0),
-(2, 'kri@gmail.com', 'Ram', 'Shyam', '2023-02-14 17:49:01', 0, 0),
-(3, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-11 11:49:02', 0, 0),
-(4, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(5, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 0, 0),
-(6, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 0, 0),
-(7, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(8, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-01 18:43:05', 0, 0),
-(9, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(10, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(11, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0),
-(12, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(13, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 0, 0),
-(14, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(15, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 0, 0),
-(16, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(17, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(18, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0),
-(19, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(20, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 0, 0),
-(21, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(22, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 0, 0),
-(23, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(24, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(25, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0),
-(26, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(27, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 0, 0),
-(28, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 0, 0),
-(29, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(30, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 0, 0),
-(31, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(32, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(33, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0),
-(34, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(35, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 0, 0),
-(36, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 0, 0),
-(37, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(38, 'abhi2@gmail.com', 'Raju2', 'Rastogi2', '2023-02-14 18:49:02', 0, 0),
-(39, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 0, 0),
-(40, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(41, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(42, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0),
-(43, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 0, 0),
-(44, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 0, 0),
-(45, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 0, 0),
-(46, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 0, 0),
-(47, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 0, 0),
-(48, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 0, 0),
-(49, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 0, 0),
-(50, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 0, 0);
+(1, 'abhi.kr@gmail.com', 'Abhishek', 'Kumar', '2023-02-13 18:49:02', 101, 301),
+(2, 'kri@gmail.com', 'Ram', 'Shyam', '2023-02-14 17:49:01', 102, 302),
+(3, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-11 11:49:02', 103, 303),
+(4, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 104, 304),
+(5, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 105, 305),
+(6, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 106, 306),
+(7, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 107, 307),
+(8, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-01 18:43:05', 108, 308),
+(9, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 109, 309),
+(10, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 110, 310),
+(11, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 111, 311),
+(12, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 112, 312),
+(13, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 113, 313),
+(14, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 114, 314),
+(15, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 115, 315),
+(16, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 116, 316),
+(17, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 117, 317),
+(18, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 118, 318),
+(19, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 119, 319),
+(20, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 120, 320),
+(21, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 121, 321),
+(22, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 122, 322),
+(23, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 123, 323),
+(24, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 124, 324),
+(25, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 125, 325),
+(26, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 126, 326),
+(27, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 127, 327),
+(28, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 128, 328),
+(29, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 129, 329),
+(30, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 130, 330),
+(31, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 131, 331),
+(32, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 132, 332),
+(33, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 133, 333),
+(34, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 134, 334),
+(35, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 135, 335),
+(36, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 136, 336),
+(37, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 137, 337),
+(38, 'abhi2@gmail.com', 'Raju2', 'Rastogi2', '2023-02-14 18:49:02', 138, 338),
+(39, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 139, 339),
+(40, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 140, 340),
+(41, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 141, 341),
+(42, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 142, 342),
+(43, 'abhi7@gmail.com', 'Raju7', 'Rastogi7', '2023-02-14 18:49:02', 143, 343),
+(44, 'abhi8@gmail.com', 'Raju8', 'Rastogi8', '2023-02-14 18:49:02', 144, 344),
+(45, 'abhi9@gmail.com', 'Raju9', 'Rastogi9', '2023-02-14 18:49:02', 145, 345),
+(46, 'abhi1@gmail.com', 'Raju1', 'Rastogi1', '2023-02-14 18:49:02', 146, 346),
+(47, 'abhi3@gmail.com', 'Raju3', 'Rastogi3', '2023-02-14 18:49:02', 147, 347),
+(48, 'abhi4@gmail.com', 'Raju4', 'Rastogi4', '2023-02-14 18:49:02', 148, 348),
+(49, 'abhi5@gmail.com', 'Raju5', 'Rastogi5', '2023-02-14 18:49:02', 149, 349),
+(50, 'abhi6@gmail.com', 'Raju6', 'Rastogi6', '2023-02-14 18:49:02', 150, 350);
 
 -- --------------------------------------------------------
 
@@ -100,17 +100,17 @@ INSERT INTO `employees` (`id`, `email_id`, `first_name`, `last_name`, `date_time
 --
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `email`) VALUES
-(1, 'ram', 'abhi@gmail.com');
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'abhi', 'abhi@1234');
 
 --
 -- Indexes for dumped tables
@@ -120,13 +120,14 @@ INSERT INTO `users` (`user_id`, `user_name`, `email`) VALUES
 -- Indexes for table `employees`
 --
 ALTER TABLE `employees`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `account_num` (`account_num`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -142,7 +143,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
