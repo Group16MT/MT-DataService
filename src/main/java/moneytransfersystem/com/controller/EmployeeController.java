@@ -56,14 +56,17 @@ public class EmployeeController {
 	// update employee rest api
 	
 	@PutMapping("/employees/{id}")
-	public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails){
+	public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails, @RequestParam(required = false) Integer selectedOption){
 		Employee employee = employeeRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
-		
+			
 		employee.setFirstName(employeeDetails.getFirstName());
 		employee.setLastName(employeeDetails.getLastName());
 		employee.setEmailId(employeeDetails.getEmailId());
-		employee.setBalance(employeeDetails.getBalance());
+		if(employee.getBalance() >= employeeDetails.getBalance()) {
+		employee.setBalance(employee.getBalance() - employeeDetails.getBalance());
+		employeeService.getDetails(selectedOption,employeeDetails.getBalance());
+		}
 		employee.setAccountNum(employeeDetails.getAccountNum());
 		
 		Employee updatedEmployee = employeeRepository.save(employee);
@@ -88,5 +91,10 @@ public class EmployeeController {
 		List<Employee> empList = employeeService.getTransactionDetails(startDate, endDate);
 		return ResponseEntity.ok(empList);
 	}	
+	@GetMapping("/employees/accountDetails")
+	public ResponseEntity<List<Employee>> getAccountDetails() {
+		List<Employee> empList = employeeService.getAccountDetails();
+		return ResponseEntity.ok(empList);
+	}
 	
 }

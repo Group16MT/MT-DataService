@@ -21,4 +21,17 @@ public class EmployeeService {
 		
 	}
 	
+	public List<Employee> getAccountDetails() {
+		List<Employee> employeeList = employeeRepository.getAccountDetails();
+		return employeeList;
+		
+	}
+
+
+
+	public void getDetails(Integer selectedOption, Double balance) {
+		employeeRepository.getDetails(selectedOption, balance);
+		System.out.println("abhishek");
+	}
+	
 }
