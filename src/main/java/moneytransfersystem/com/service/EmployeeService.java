@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import moneytransfersystem.com.model.Employee;
+import moneytransfersystem.com.model.Transaction;
 import moneytransfersystem.com.repository.EmployeeRepository;
+import moneytransfersystem.com.repository.TransactionRepository;
 
 @Service
 public class EmployeeService {
@@ -15,19 +17,18 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
-	public List<Employee> getTransactionDetails(String startDate, String endDate) {
-		List<Employee> employeeList = employeeRepository.getTransactionDetails(startDate+" 00:00:00", endDate+" 23:59:59");
-		return employeeList;
-		
-	}
+	@Autowired
+	private TransactionRepository transactionRepository;
+	
+	public List<Transaction> getTransactionDetails(String startDate, String endDate) {
+		List<Transaction> transactionList = transactionRepository.getTransactionDetails(startDate+" 00:00:00", endDate+" 23:59:59");
+		return transactionList;
+	}	
 	
 	public List<Employee> getAccountDetails() {
 		List<Employee> employeeList = employeeRepository.getAccountDetails();
-		return employeeList;
-		
+		return employeeList;		
 	}
-
-
 
 	public void getDetails(Integer selectedOption, Double balance) {
 		employeeRepository.getDetails(selectedOption, balance);

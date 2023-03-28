@@ -37,6 +37,23 @@ CREATE TABLE `employees` (
   `balance` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `transaction` (
+  `id` bigint(20) NOT NULL,
+  `date_time` datetime NOT NULL DEFAULT current_timestamp(),
+  `from_account_num` int(11) NOT NULL,
+  `to_account_num` int(11) NOT NULL,
+  `amount` double NOT NULL,
+  `balance` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `transaction` (`id`, `date_time`, `from_account_num`, `to_account_num`, `amount`, `balance`) VALUES
+(1, '2023-03-28 18:49:02', 123, 124, 500, 600);
+
+ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `transaction`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 --
 -- Dumping data for table `employees`
 --
@@ -138,6 +155,14 @@ ALTER TABLE `users`
 --
 ALTER TABLE `employees`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+
+
+ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `transaction`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -18,7 +18,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 	@Query(value = "SELECT * FROM employees  WHERE date_time >= ?1 AND date_time <= ?2" ,nativeQuery=true)
 	List<Employee> getTransactionDetails(String startDate, String endDate);
 	
-	@Query(value = "SELECT * FROM employees GROUP BY `account_num` ORDER BY `account_num`" ,nativeQuery=true)
+	@Query(value = "SELECT * FROM employees ORDER BY `id`" ,nativeQuery=true)
 	List<Employee> getAccountDetails();
 
 
