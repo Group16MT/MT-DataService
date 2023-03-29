@@ -30,26 +30,26 @@ public class AccountController {
 
 	@Autowired
 	private AccountRepository accountRepository;
-	
+
 	@Autowired
 	private TransactionRepository transactionRepository;
-	
+
 	@Autowired
 	private AccountService accountService;
-	
+
 	// get all accounts
 	@GetMapping("/accounts")
-	public List<Account> getAllAccounts(){
+	public List<Account> getAllAccounts() {
 		return accountRepository.findAll();
-		
-	}		
-	
+
+	}
+
 	// create acccount rest api
 	@PostMapping("/accounts")
 	public Account createAccount(@RequestBody Account account) {
 		return accountRepository.save(account);
 	}
-	
+
 	// get account by id rest api
 	@GetMapping("/accounts/{id}")
 	public ResponseEntity<Account> getAccountById(@PathVariable Long id) {
@@ -57,25 +57,24 @@ public class AccountController {
 				.orElseThrow(() -> new ResourceNotFoundException("Account not exist with id :" + id));
 		return ResponseEntity.ok(account);
 	}
-	
-	// update account rest api	
+
+	// update account rest api
 	@PutMapping("/accounts/{id}")
-	public ResponseEntity<Account> updateAccount(@PathVariable Long id, @RequestBody Account accountDetails, @RequestParam(required = false) Integer selectedOption){
+	public ResponseEntity<Account> updateAccount(@PathVariable Long id, @RequestBody Account accountDetails,
+			@RequestParam(required = false) Integer selectedOption) {
 		Account account = accountRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Account not exist with id :" + id));
-			
+
 		account.setFirstName(accountDetails.getFirstName());
 		account.setLastName(accountDetails.getLastName());
 		account.setEmailId(accountDetails.getEmailId());
-		if(account.getBalance() >= accountDetails.getBalance()) {
+		if (account.getBalance() >= accountDetails.getBalance()) {
 			account.setBalance(account.getBalance() - accountDetails.getBalance());
-		accountService.getDetails(selectedOption,accountDetails.getBalance());
+			accountService.getDetails(selectedOption, accountDetails.getBalance());
 		}
-		account.setAccountNum(accountDetails.getAccountNum());
-		
 		Account updatedAccount = accountRepository.save(account);
 		return ResponseEntity.ok(updatedAccount);
-	}	
+	}
 
 	@GetMapping("/accounts/transactionaDetails")
 	public ResponseEntity<List<Transaction>> getTransactionDetails(@RequestParam(required = false) String startDate,
@@ -88,40 +87,38 @@ public class AccountController {
 	@Transactional
 	public Transaction createTransactionDetails(@RequestBody Transaction transaction) throws Exception {
 
-		
-		if(transaction.getFromAccountNum() == transaction.getToAccountNum()) {
+		if (transaction.getFromAccountNum() == transaction.getToAccountNum()) {
 			throw new Exception("Deductee and Beneficiary cannot be same.");
 		}
 
-		Account fromAccount = accountRepository.findById((long) transaction.getFromAccountNum())
-				.orElseThrow(() -> new ResourceNotFoundException("Account not exist with id :" + transaction.getFromAccountNum()));
-		
-		Account toAccount = accountRepository.findById((long) transaction.getToAccountNum())
-				.orElseThrow(() -> new ResourceNotFoundException("Account not exist with id :" + transaction.getToAccountNum()));
-		
-		if(transaction.getAmount() <=0 ) {
+		Account fromAccount = accountRepository.findById((long) transaction.getFromAccountNum()).orElseThrow(
+				() -> new ResourceNotFoundException("Account not exist with id :" + transaction.getFromAccountNum()));
+
+		Account toAccount = accountRepository.findById((long) transaction.getToAccountNum()).orElseThrow(
+				() -> new ResourceNotFoundException("Account not exist with id :" + transaction.getToAccountNum()));
+
+		if (transaction.getAmount() <= 0) {
 			throw new Exception("Invalid amount");
 		}
-		
+
 		Double fromBalance = fromAccount.getBalance();
-		if(fromBalance - transaction.getAmount() < 0) {
+		if (fromBalance - transaction.getAmount() < 0) {
 			throw new Exception("Insufficient fund in deductee account");
 		}
-		
+
 		fromAccount.setBalance(fromBalance - transaction.getAmount());
-		toAccount.setBalance(toAccount.getBalance() + transaction.getAmount());		
+		toAccount.setBalance(toAccount.getBalance() + transaction.getAmount());
 		transaction.setBalance(toAccount.getBalance());
-		
+
 		accountRepository.save(fromAccount);
-		accountRepository.save(toAccount);	
+		accountRepository.save(toAccount);
 		return transactionRepository.save(transaction);
 	}
 
-	
 	@GetMapping("/accounts/accountDetails")
 	public ResponseEntity<List<Account>> getAccountDetails() {
 		List<Account> empList = accountService.getAccountDetails();
 		return ResponseEntity.ok(empList);
 	}
-	
+
 }
