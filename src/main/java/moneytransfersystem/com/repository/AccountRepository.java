@@ -8,18 +8,18 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import moneytransfersystem.com.model.Employee;
+import moneytransfersystem.com.model.Account;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Long>{
+public interface AccountRepository extends JpaRepository<Account, Long>{
 	
 	
 	
 	@Query(value = "SELECT * FROM employees  WHERE date_time >= ?1 AND date_time <= ?2" ,nativeQuery=true)
-	List<Employee> getTransactionDetails(String startDate, String endDate);
+	List<Account> getTransactionDetails(String startDate, String endDate);
 	
 	@Query(value = "SELECT * FROM employees ORDER BY `id`" ,nativeQuery=true)
-	List<Employee> getAccountDetails();
+	List<Account> getAccountDetails();
 
 
 	

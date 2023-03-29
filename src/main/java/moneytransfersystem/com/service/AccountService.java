@@ -1,21 +1,20 @@
 package moneytransfersystem.com.service;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import moneytransfersystem.com.model.Employee;
+import moneytransfersystem.com.model.Account;
 import moneytransfersystem.com.model.Transaction;
-import moneytransfersystem.com.repository.EmployeeRepository;
+import moneytransfersystem.com.repository.AccountRepository;
 import moneytransfersystem.com.repository.TransactionRepository;
 
 @Service
-public class EmployeeService {
+public class AccountService {
 
 	@Autowired
-	private EmployeeRepository employeeRepository;
+	private AccountRepository accountRepository;
 	
 	@Autowired
 	private TransactionRepository transactionRepository;
@@ -25,13 +24,13 @@ public class EmployeeService {
 		return transactionList;
 	}	
 	
-	public List<Employee> getAccountDetails() {
-		List<Employee> employeeList = employeeRepository.getAccountDetails();
-		return employeeList;		
+	public List<Account> getAccountDetails() {
+		List<Account> accountList = accountRepository.getAccountDetails();
+		return accountList;		
 	}
 
 	public void getDetails(Integer selectedOption, Double balance) {
-		employeeRepository.getDetails(selectedOption, balance);
+		accountRepository.getDetails(selectedOption, balance);
 		System.out.println("abhishek");
 	}
 	

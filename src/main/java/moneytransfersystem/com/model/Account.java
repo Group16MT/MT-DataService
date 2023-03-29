@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "employees")
-public class Employee {
+public class Account {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,11 +36,11 @@ public class Employee {
 	@Column(name = "balance")
 	private Double balance;
 	
-	public Employee() {
+	public Account() {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId, String dateTime, int accountNum, Double balance) {
+	public Account(String firstName, String lastName, String emailId, String dateTime, int accountNum, Double balance) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -49,6 +49,7 @@ public class Employee {
 		this.accountNum = accountNum;
 		this.balance = balance;
 	}
+	
 	public long getId() {
 		return id;
 	}
