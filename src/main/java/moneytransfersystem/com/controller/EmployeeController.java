@@ -104,7 +104,7 @@ public class EmployeeController {
 	public Transaction createTransactionDetails(@RequestBody Transaction transaction) throws Exception {
 
 		
-		if(transaction.getFromAccountNum() == transaction.getFromAccountNum()) {
+		if(transaction.getFromAccountNum() == transaction.getToAccountNum()) {
 			throw new Exception("Deductee and Beneficiary cannot be same.");
 		}
 
