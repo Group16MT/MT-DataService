@@ -58,10 +58,32 @@ public class AccountController {
 	@PostMapping("/accounts")
 	public Account createAccount(@RequestBody Account account) {
 		try {
+			if(account.getFirstName() == null || account.getFirstName().isBlank()) {
+				throw new ResponseStatusException(
+				           HttpStatus.BAD_REQUEST, "First Name is mandatory", null );
+			}
+			if(account.getLastName() == null || account.getLastName().isBlank()) {
+				throw new ResponseStatusException(
+				           HttpStatus.BAD_REQUEST, "Last Name is mandatory", null );
+			}
+			if(account.getEmailId() == null || account.getEmailId().isBlank()) {
+				throw new ResponseStatusException(
+				           HttpStatus.BAD_REQUEST, "Email ID is mandatory", null );
+			}
+			if(account.getBalance() == null || account.getBalance() < 0) {
+				throw new ResponseStatusException(
+				           HttpStatus.BAD_REQUEST, "Invalid Balance", null );
+			}
+			if(account.getDateTime() == null || account.getEmailId().isBlank()) {
+				throw new ResponseStatusException(
+				           HttpStatus.BAD_REQUEST, "Date is mandatory", null );
+			}
 			return accountRepository.save(account);		
+		}catch(ResponseStatusException ex) {
+			throw ex;
 		}catch(Exception ex) {
 			throw new ResponseStatusException(
-			           HttpStatus.INTERNAL_SERVER_ERROR, "Money Transfer System Error:", ex);
+			           HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage(), ex);
 		}		
 	}
 
